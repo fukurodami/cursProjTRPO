@@ -1,69 +1,178 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Furniture</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__logo">Furniture</div>
-          <nav class="nav">
-            <a class="nav__link" href="#">Каталог</a>
-            <a class="nav__link" href="#">Услуги</a>
-            <a class="nav__link" href="#">О нас</a>
-            <a class="nav__link" href="#">Контакты</a>
-          </nav>
-        </div>
-      </div>
-    </header>
+<!--https://www.mebel-moskva.ru/-->>
+<head>
+  <meta charset="utf-8" />
+  <title>Furniture</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
+</head>
 
-    <div class="intro">
-      <div class="container">
-        <div class="intro_inner">
-          <h2 class="intro__suptitle">Мебель на заказ</h2>
-          <h1 class="intro__title">Добро пожаловать на фабрику Furniture</h1>
-          <a class="btn" href="#">Каталог</a>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">Furniture</div>
+        <nav class="nav">
+          <a class="nav__link" href="#">Главная</a>
+          <a class="nav__link" href="#catalog">Каталог</a>
+          <a class="nav__link" href="#service">Услуги</a>
+          <a class="nav__link" href="#">О нас</a>
+          <a class="nav__link" href="#">Контакты</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="intro">
+    <div class="container">
+      <div class="intro_inner">
+        <h2 class="intro__suptitle">Мебель на заказ</h2>
+        <h1 class="intro__title">Добро пожаловать на фабрику Furniture</h1>
+        <a class="btn" href="#catalog">Каталог</a>
+      </div>
+    </div>
+  </div>
+  <section class="section"  id="catalog">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">КАТАЛОГ</h2>
+        <div class="catalog">
+          <div class="catalog__item">
+            <h3>Новинки</h3>
+            <img src="../media/img/build.jpg" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Лучшее предложение</h3>
+            <img src="../media/img/build.jpg" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Распродажа</h3>
+            <img src="../media/img/build.jpg" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Спальни</h3>
+            <img src="../media/products/d52d4fa34930cedb7605bf6be921a430.webp" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Мебель для гостиной</h3>
+            <img src="../media/products/5e819062ba64560a427a7cc8099cbd8e.webp" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Кровати</h3>
+            <img src="../media/products/5s7at9koabqnxqttxy9t1cmo7un03uhb.webp" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Комоды</h3>
+            <img src="../media/products/59a9239eb176520c7a03c3257713c40b.webp" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Шкафы</h3>
+            <img src="../media/products/b8c3739a226d78947a120b33d44939af.webp" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Столы</h3>
+            <img src="../media/products/03ef14439a4b9ebc0eefd829a3bf3158.webp" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Стеллажи</h3>
+            <img src="../media/products/2z1ooiez1qfmcf7u6v099tm6yexencjp.webp" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Прихожие</h3>
+            <img src="../media/products/9965kdsms9ksgr28rcjhbqxk6lmdodga.webp" alt="">
+          </div>
+          <div class="catalog__item">
+            <h3>Мебель для подростков</h3>
+            <img src="../media/products/ce805c00535b853f85703cd551653b7c.webp" alt="">
+          </div>
         </div>
       </div>
-    </div>
-    <div class="catalog">
-      <div class="container">
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
-        <h1>qwd</h1>
+  </section>
+  <section class="section" id="service">
+    <div class="container">
+      <div class="section__header" >
+        <h2 class="section__title">Что мы предлагаем</h2>
+        <div class="section__text">
+          <h2>Мебель от производителя</h2>
+          <p>Приветствуем Вас в официальном интернет-магазине компании «Furniture»!</p>
+          <p>
+            Наша история начинается в 2022 году, и с тех пор миссия компании остается неизменной
+            — мы делаем жизнь красивее и уютнее. Мебельная фабрика «Furniture» стремится быть лидером индустрии,
+            непрестанно совершенствуя методику изготовления и применяя в производстве современные технологии.
+            Костяк нашей компании составляют высококвалифицированные профессионалы, чей богатый опыт
+            — лучшая гарантия качества и впечатляющего дизайна нашей продукции. За строк работы мы
+            наладили партнерские отношения с ведущими европейскими и отечественными поставщиками сырья и
+            комплектующих. Для создания мебели мы отбираем только те материалы, которые отличаются повышенной
+            надежностью и экологической чистотой.
+          </p>
+          <h2>Модульная мебель от «Furniture»</h2>
+          <p>
+            Стоит отметить и богатый ассортимент предметов интерьера, который мы с гордостью представляем
+            нашим покупателям. Мы производим корпусную мебель в различных стилевых решениях. Мы создаем
+            спальни, гостиные, прихожие, а также все необходимые предметы интерьера для детских и
+            подростковых комнат, спален, студий и кабинетов.
+          </p>
+          <p>Каковы преимущества модульной мебели от производителя? Отметим важнейшие:</p>
+          <ul>
+            <li>
+              Модульная мебель позволяет комбинировать различные элементы изделий, что позволяет
+              предметам интерьера оптимально вписываться в пространство Вашего помещения;
+            </li>
+            <li>
+              Вы всегда можете докупить дополнительные элементы интерьера, если ощутите потребность в их приобретении.
+              При этом стилевое единство интерьера будет сохранено;
+            </li>
+            <li>
+              Наши предложения позволяют создать индивидуальные решения по обустройству жилого пространства.
+            </li>
+          </ul>
+          <h2>Выбирайте мебель от производителя он-лайн!</h2>
+          <p>
+            Интернет-шоппинг делает выбор и приобретение еще более удобным: Вы экономите время и средства,
+            так как мы экономим не на качестве продукции, а на аренде дорогостоящих торговых точек.
+          </p>
+          <h2>Почему покупать мебель от производителя в интернет-магазине — выгодно?</h2>
+          <ul>
+            <li>
+              Наш каталог позволит Вам внимательно рассмотреть все заинтересовавшие Вас изделия.
+              Вы сможете выбирать различные предметы интерьера — от традиционной «классики» до
+              современного минимализма.
+            </li>
+            <li>
+              Вы можете делать приобретения тогда, когда это удобно — даже ночью! При этом Вы можете оставаться дома или
+              делать покупки в пути, использую смартфон или ноутбук;
+            </li>
+            <li>
+              Наш интернет-магазин предоставляет возможность оформления доставки в любой регион России;
+            </li>
+            <li>
+              Мы даем фирменную гарантию на всю продукцию, представленную в интернет-магазине. Наша мебель
+              от производителя соответствует самым современным тенденциям индустрии;
+            </li>
+            <li>
+              Цены в нашем предприятии — реальные цены от производителя, без наценок и накруток.
+              Именно поэтому они по-настоящему демократичны и доступны.
+            </li>
+          </ul>
+          <p>
+            Итак, если Вы находитесь в поисках стильных и качественных решений в области дизайна
+            интерьера — ждем Ваши заказов! В том случае, если у Вас возникнут трудности с выбором
+            — свяжитесь, пожалуйста, с нашими консультантами, и мы с радостью придем на помощь.
+          </p>
+        </div>
       </div>
+
     </div>
-  </body>
+  </section>
+</body>
+
 </html>
