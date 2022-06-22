@@ -1,9 +1,10 @@
+from tabnanny import check
 from django.db import models
 
 class Color(models.Model):
     """Продукт"""
     title = models.CharField("Название", max_length=100)
-    photo = models.ImageField("Фото",  upload_to="colors/")
+    photo = models.ImageField("Фото",  upload_to="colored/")
 
     def __str__(self):
         return self.title
@@ -56,5 +57,22 @@ class Product(models.Model):
     class Meta:
         verbose_name = "Продукт"
         verbose_name_plural = "Продукт"
+
+class Order(models.Model):
+    """Артикл"""
+    user = models.CharField("Пользователь", max_length=100)
+    product = models.ForeignKey(Product, verbose_name="Продукт", on_delete=models.SET_NULL, null=True)
+    count = models.PositiveIntegerField("Количество")
+    phone = models.CharField("Телефон", max_length=30)
+    check_order = models.BooleanField("Обработан", default=False)
+
+    def __str__(self):
+        return f"{self.user} - {self.product}"
+
+    class Meta:
+        verbose_name = "Заказ"
+        verbose_name_plural = "Заказы"
+
+
 
 

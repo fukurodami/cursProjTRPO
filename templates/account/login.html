@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Log-in{% endblock %}
+{% block content %}
+<div class="login">
+    <h1>Log-in</h1>
+    <p>Пожалуйста, обратитесь к администратору для сотрудничества если вы не зарегистрированны: Почтовый адрес - fukurodami@gmail.com</p>
+    <form action="." method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Log-in"></p>
+    </form>
+</div>
+{% endblock %}

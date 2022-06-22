@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<!--https://www.mebel-moskva.ru/-->>
+<head>
+  <meta charset="utf-8" />
+  <title>Furniture</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">Furniture</div>
+        <nav class="nav">
+          <a class="nav__link" href="/">Главная</a>
+          <a class="nav__link" href="/#catalog">Каталог</a>
+          <a class="nav__link" href="/#service">Услуги</a>
+          <a class="nav__link" href="/us">О нас</a>
+          <a class="nav__link" href="/us#cont">Контакты</a>
+          {% if user.is_authenticated %}
+            <a class="nav__link" href="/account/logout">Выход</a>
+            <h2 class="nav__link">{{user.username }}</h2>
+          {% else %}
+            <a class="nav__link" href="/account/login">Вход</a>
+          {% endif %}
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="section"  id="catalog">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Шкафы</h2>
+        <div class="catalog">
+            {% for item in item_list %}
+            <div class="item">
+              <a href="/{{ item.id }}">
+                <h5>Название: {{item.title}}</h5>
+                <h5>Артикул: {{item.artikle}}</h5>
+                <h5>Ширина: {{item.width}}</h5>
+                <h5>Высота: {{item.height}}</h5>
+                <h5>Глубина: {{item.depth}}</h5>
+                <h5>Цена: {{item.coast}}</h5>
+                <h5>Основной цвет: {{item.colors}}</h5>
+                <h5>Гарантия: {{item.ffrancia}}</h5>
+                <div class="item__img">
+                    <h5>Фото: <img class="item__img" src="{{ item.photo.url }}" alt=""></h5>
+                </div>
+                
+                <h5>Группа: {{item.group}}</h5>
+              </a>
+            </div>
+                
+            {% endfor %}
+        </div>
+      </div>
+  </section>
+  
+</body>
+
+</html>

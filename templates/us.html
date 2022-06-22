@@ -19,10 +19,16 @@
           <div class="header__logo">Furniture</div>
           <nav class="nav">
             <a class="nav__link" href="/">Главная</a>
-            <a class="nav__link" href="#">Каталог</a>
-            <a class="nav__link" href="#">Услуги</a>
-            <a class="nav__link" href="#">О нас</a>
-            <a class="nav__link" href="#">Контакты</a>
+          <a class="nav__link" href="/#catalog">Каталог</a>
+          <a class="nav__link" href="/#service">Услуги</a>
+          <a class="nav__link" href="/us">О нас</a>
+          <a class="nav__link" href="/us#cont">Контакты</a>
+          {% if user.is_authenticated %}
+            <a class="nav__link" href="/account/logout">Выход</a>
+            <h2 class="nav__link">{{user.username }}</h2>
+          {% else %}
+            <a class="nav__link" href="/account/login">Вход</a>
+          {% endif %}
           </nav>
         </div>
       </div>
@@ -36,18 +42,17 @@
             <div class="about__item">
               <img src="../media/img/team.jpg" alt="">
               <p>Наша команад</p>
-            </div>
-          <div class="about__item">
+            </div> 
             <div class="about__item">
               <img src="../media/img/build.jpg" alt="">
+              <p>Наше предприятие</p>
             </div>
-            <p>Наше предприятие</p>
-          </div>
-          <div class="about__item">
             <div class="about__item">
               <img src="../media/img/dip.jpg" alt="">
+              <p>Наш документ качества</p>
             </div>
-            <p>Наш документ качества</p>
+            <p id="cont">Контактный номер телефона: 89009210534</p>
+            <p id="cont">Почтовый адрес: fukurodami@gmail.com</p>
           </div>
         </div>
       </div>
